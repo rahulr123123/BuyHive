@@ -1,0 +1,165 @@
+/* ================================
+   BuyHive Navbar Styles
+   ================================ */
+
+/* Base Navbar */
+.navbar {
+  background-color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 10px rgba(9, 5, 29, 0.1);
+  font-size: 1.1rem;
+  z-index: 999;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  padding: 0.6rem 0.8rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+  color: black;
+}
+
+.navbar-link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: translateY(-1px);
+  border-radius: 4px;
+}
+
+.nav-link-label {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Nav Icon Styling */
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+.nav-icon:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+/* Cart Badge */
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: #e63946;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 50%;
+  padding: 2px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navbar Toggler Animation */
+.navbar-toggler {
+  border: none;
+  background: transparent;
+  padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background-color: black;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Nav Items */
+.navbar-nav .nav-item {
+  position: relative;
+  margin: 0 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .navbar {
+    font-size: 1.2rem;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .navbar-link {
+    padding: 0.8rem 1rem;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .nav-link-label {
+    font-size: 16px;
+  }
+
+  .navbar-toggler span {
+    width: 24px;
+    height: 3px;
+  }
+
+  .expanded-cart {
+    display: none !important;
+  }
+
+  .media-cart {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+/* Offcanvas Width Adjustment if needed */
+.offcanvas.offcanvas-end {
+  width: 280px;
+}
